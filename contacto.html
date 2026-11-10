@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta con La Academia de las Almas Perdidas. Solicita información sobre admisiones, envía tus preguntas o comparte tus teorías.">
+    <title>Contacto | La Academia de las Almas Perdidas</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🌙</span>
+                <span class="logo-text">Noctiluna</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="historia.html" class="nav-link">Historia</a></li>
+                <li><a href="personajes.html" class="nav-link">Personajes</a></li>
+                <li><a href="criaturas.html" class="nav-link">Criaturas</a></li>
+                <li><a href="contacto.html" class="nav-link active">Contacto</a></li>
+                <li>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Modo oscuro">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">Contacto</h1>
+            <p class="page-subtitle">¿Te atreves a enviarnos un mensaje?</p>
+        </div>
+    </section>
+
+    <section class="section contacto-section">
+        <div class="container">
+            <div class="contacto-grid">
+                <!-- Formulario -->
+                <div class="formulario-container">
+                    <h2 class="form-title">
+                        <i class="fas fa-feather-alt"></i> Envía tu Mensaje
+                    </h2>
+                    <p class="form-subtitle">Los susurros llegan más rápido, pero los mensajes escritos son más difíciles de olvidar.</p>
+                    
+                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/tu-form-id" method="POST">
+                        <div class="form-group">
+                            <label for="nombre">
+                                <i class="fas fa-user"></i> Nombre
+                            </label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i> Correo Electrónico
+                            </label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="asunto">
+                                <i class="fas fa-scroll"></i> Asunto
+                            </label>
+                            <select id="asunto" name="asunto" required>
+                                <option value="">Selecciona un asunto</option>
+                                <option value="admisiones">Información sobre Admisiones</option>
+                                <option value="historia">Preguntas sobre la Historia</option>
+                                <option value="teorias">Compartir Teorías</option>
+                                <option value="criaturas">Consulta sobre Criaturas</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">
+                                <i class="fas fa-comment"></i> Mensaje
+                            </label>
+                            <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí... Los secretos están seguros con nosotros." required></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" name="acepto" required>
+                                Acepto que mis datos sean utilizados para responder a mi consulta
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                        </button>
+                    </form>
+
+                    <div id="formMessage" class="form-message"></div>
+                </div>
+
+                <!-- Información de contacto -->
+                <div class="info-container">
+                    <h2 class="form-title">
+                        <i class="fas fa-map-marker-alt"></i> Encuéntranos
+                    </h2>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">🏰</div>
+                        <div>
+                            <h4>Ubicación</h4>
+                            <p>Entre montañas que respiran y bosques que susurran</p>
+                            <p class="info-small">No aparece en mapas ordinarios. Solo accesible para aquellos con habilidades mágicas.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">📜</div>
+                        <div>
+                            <h4>Correspondencia</h4>
+                            <p>academia@noctiluna.magic</p>
+                            <p class="info-small">Las lechuzas mensajeras llegan en 3-5 días.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">🕯️</div>
+                        <div>
+                            <h4>Horario de Atención</h4>
+                            <p>Lunes a Viernes: 8:00 - 18:00</p>
+                            <p>Sábados: 9:00 - 13:00</p>
+                            <p class="info-small">No atendemos durante la luna llena.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">⚠️</div>
+                        <div>
+                            <h4>Advertencia</h4>
+                            <p class="warning-text">No envíes mensajes después del toque de queda. Algunos mensajes nunca llegan... o llegan a lugares equivocados.</p>
+                        </div>
+                    </div>
+
+                    <!-- Redes sociales -->
+                    <div class="social-contact">
+                        <h4>Síguenos en el mundo exterior</h4>
+                        <div class="social-links large">
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa conceptual -->
+    <section class="section mapa-section">
+        <div class="container">
+            <div class="mapa-placeholder">
+                <div class="mapa-content">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Mapa de Noctiluna</h3>
+                    <p>El mapa de la Academia está protegido por encantamientos. Solo los estudiantes vinculados pueden verlo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-logo">🌙 Noctiluna</h3>
+                    <p>La Academia de las Almas Perdidas</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="historia.html">Historia</a></li>
+                        <li><a href="personajes.html">Personajes</a></li>
+                        <li><a href="criaturas.html">Criaturas</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 La Academia de las Almas Perdidas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
